@@ -30,6 +30,25 @@ public class Main {
         // zad 6
         String s6 = "SomeStringLongerThan10Characters";
         System.out.println(s6.substring(3, 3+5));
-        ////////////
+        // exc 3 - zad 1
+        zad3_1(5.1, 3.5);
+        // zad 4
+        System.out.println("Zad 3_4");
+        String[] kolory = {"czerwony", "zielony", "niebieski", "czarny", "żółty", "brązowy"};
+        System.out.println(kolory[(100 % 6) - 1]);
+        // zad 5
+        System.out.println("Zad 3_5");
+        zad3_5(35);
+    }
+    static void zad3_1(double x, double y) {
+        System.out.printf("%.2f + %.2f = %.2f\n",x, y, (x + y));
+        System.out.printf("%.2f - %.2f = %.2f\n",x, y, (x - y));
+        System.out.printf("%.2f * %.2f = %.2f\n",x, y, (x * y));
+        System.out.printf("%.2f / %.2f = %.2f\n",x, y, (x / y));
+    }
+
+    static void zad3_5(double x) {
+        System.out.printf("%.2f" + (x % 3 == 0 ? "" : " nie") + " jest podzielna przez 3.\n", x);
+        System.out.printf("%.2f" + (x % 7 == 0 ? "" : " nie") + " jest podzielna przez 7.\n", x);
     }
 }
