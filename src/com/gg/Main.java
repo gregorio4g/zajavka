@@ -1,5 +1,7 @@
 package com.gg;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("2. Napisz taki sam program, tylko spraw, żeby na ekranie została wydrukowana treść tego zadania.");
@@ -81,7 +83,42 @@ public class Main {
                 System.out.println("####");
             }
         }
+        // exc 6 - zad 1
+        String s6_1 = "Ala ma kota!";
+        System.out.printf("6-1: %s <=> %s%n", s6_1, backToFrontString(s6_1));
+        // exc 6 - zad 2
+        String s6_21 = "Ala ma kota!";
+        String s6_22 = "Kobyła ma mały bok";
+        System.out.printf("6-2: Zdanie %s " + (isPalindrom(s6_21) ? "" : "nie ") + "jest palindromem.%n", s6_21);
+        System.out.printf("6-2: Zdanie %s " + (isPalindrom(s6_22) ? "" : "nie ") + "jest palindromem.%n", s6_22);
+        // exc 6 - zad 3
+        int[] arr6_3 = {4,6,8,10,2,4,5};
+        System.out.printf("6-3: " + Arrays.toString(arr6_3) + " <=> " + Arrays.toString(backToFrontIntArr(arr6_3)) + "%n");
+        // exc 6 - zad 4
+        // int[] arr6_4 = {4,6,6,8,10,2,2,4,5};
 
+
+    }
+
+    private static int[] backToFrontIntArr(int[] input) {
+        int[] out = new int[input.length];
+        for (int i = input.length; i > 0; i--) {
+            out[input.length - i] = input[i-1];
+        }
+        return out;
+    }
+
+    private static boolean isPalindrom(String input) {
+        StringBuilder sb = new StringBuilder(input.replace(" ", ""));
+        return sb.toString().equalsIgnoreCase(sb.reverse().toString());
+    }
+
+    private static String backToFrontString(String sentence) {
+        return new StringBuilder(sentence).reverse().toString();
+    }
+
+    public static int varArgsExample(int arg, int... varArgs) {
+        return varArgs.length;
     }
 
     static String fibonacci(int len) {
