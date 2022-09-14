@@ -89,8 +89,8 @@ public class Main {
         // exc 6 - zad 2
         String s6_21 = "Ala ma kota!";
         String s6_22 = "Kobyła ma mały bok";
-        System.out.printf("6-2: Zdanie %s " + (isPalindrom(s6_21) ? "" : "nie ") + "jest palindromem.%n", s6_21);
-        System.out.printf("6-2: Zdanie %s " + (isPalindrom(s6_22) ? "" : "nie ") + "jest palindromem.%n", s6_22);
+        System.out.printf("6-2: Zdanie: %s " + (isPalindrom(s6_21) ? "" : "nie ") + "jest palindromem.%n", s6_21);
+        System.out.printf("6-2: Zdanie: %s " + (isPalindrom(s6_22) ? "" : "nie ") + "jest palindromem.%n", s6_22);
         // exc 6 - zad 3
         int[] arr6_3 = {4,6,8,10,2,4,5};
         System.out.printf("6-3: " + Arrays.toString(arr6_3) + " <=> " + Arrays.toString(backToFrontIntArr(arr6_3)) + "%n");
