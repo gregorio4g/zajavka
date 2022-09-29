@@ -1,13 +1,31 @@
 package com.gg.zad7.z4;
 
 public class Exam {
-    public String[] questions = {
+    private final String[] questions = {
             "Gdzie jest słonko kiedy śpi?",
             "Czy wilk zawsze bywa zły?",
             "Dokąd tupta nocą jeż?",
             "O co chodzi?",
             "A kogo to obchodzi?"
     };
+    private int score;
+    private Examinated student;
+
+    public String[] getQuestions() {
+        return questions;
+    }
+
+    public Examinated getStudent() {
+        return student;
+    }
+
+    public void setStudent(final Examinated student) {
+        this.student = student;
+    }
+
+    public int getScore() {
+        return score;
+    }
 
     private final int[] goodAnswers = {0, 1, 2, 0, 1};
 
@@ -29,5 +47,13 @@ public class Exam {
         this.answers = answers;
     }
 
+    void calculateScore() {
+        int points = 0;
+        for (int i = 0; i < getAnswers().length; i++) {
+            if(answers[i] == goodAnswers[i]) {
+                points++;
+            }
+        }
+    }
 
 }
