@@ -54,6 +54,7 @@ public class Exam {
                 points++;
             }
         }
+        this.score = points;
     }
 
 }
