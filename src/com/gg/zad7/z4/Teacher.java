@@ -15,7 +15,7 @@ public class Teacher extends Person implements Examiner {
     public Exam[] createExams(int numberOfStudents) {
         Exam[] exams = new Exam[numberOfStudents];
         for (int i = 0; i < exams.length; i++) {
-            exams[i] = createExam();
+//            exams[i] = createExam();
         }
         return null;
     }
