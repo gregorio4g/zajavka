@@ -3,7 +3,7 @@ package com.gg.zad7.z4;
 import java.util.Random;
 
 public class Student extends Person implements Examinated {
-    public Student(String name) {
+    public Student(final String name) {
         super(name);
         System.out.println("Creating student: " + name);
     }
