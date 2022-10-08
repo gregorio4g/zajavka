@@ -1,5 +1,9 @@
 package com.gg;
 
+import com.gg.zad09.global.Global;
+
+import static com.gg.zad09.global.Global.GLOBAL_CONSTANT;
+
 import java.util.Arrays;
 
 public class Main {
@@ -96,6 +100,11 @@ public class Main {
         System.out.printf("6-3: " + Arrays.toString(arr6_3) + " <=> " + Arrays.toString(backToFrontIntArr(arr6_3)) + "%n");
         // exc 6 - zad 4
         // int[] arr6_4 = {4,6,6,8,10,2,2,4,5};
+        // exc 9 - zad 1
+        System.out.println("9-1");
+        System.out.println(Global.GLOBAL_CONSTANT);
+        System.out.println(GLOBAL_CONSTANT);
+//        Global.GLOBAL_CONSTANT = "19";
 
 
     }
