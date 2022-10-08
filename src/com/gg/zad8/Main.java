@@ -8,5 +8,9 @@ public class Main {
 		for (Day day : Day.values()) {
 			System.out.println(day + " is working day?: " + day.isWorkingDay() + " Is weekend?: " + day.isWeekend());
 		}
+
+		for (DanceClass danceClass : DanceClass.values()) {
+			System.out.println(danceClass);
+		}
 	}
 }
