@@ -1,4 +1,4 @@
-package com.gg.test15;
+package com.gg.tests15;
 
 public class AnotherGarbageCollectionQuiz {
 	public static void main(String[] args) {

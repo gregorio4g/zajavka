@@ -4,6 +4,8 @@ import com.gg.zad09.global.Global;
 
 import static com.gg.zad09.global.Global.GLOBAL_CONSTANT;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Arrays;
 
 public class Main {
@@ -105,6 +107,9 @@ public class Main {
         System.out.println(Global.GLOBAL_CONSTANT);
         System.out.println(GLOBAL_CONSTANT);
 //        Global.GLOBAL_CONSTANT = "19";
+
+        LocalDate date = LocalDate.of(2020, Month.DECEMBER, 33);
+        System.out.println(date);
 
 
     }
