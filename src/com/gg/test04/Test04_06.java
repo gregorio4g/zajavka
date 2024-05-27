@@ -1,6 +1,6 @@
 package com.gg.test04;
 
-public class test04_06 {
+public class Test04_06 {
     public static void main(String[] args) {
         boolean a = true, b = true, c = false;
         int d = 1;

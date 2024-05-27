@@ -1,8 +1,6 @@
 package com.gg.zad02;
 
-import java.util.Arrays;
-
-public class zad02_02 {
+public class Zad02_02 {
     public static void main(String[] args) {
         StringBuilder s1 = new StringBuilder();
         String s2 = "";

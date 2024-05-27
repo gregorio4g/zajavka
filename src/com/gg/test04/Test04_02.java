@@ -1,6 +1,6 @@
 package com.gg.test04;
 
-public class test04_02 {
+public class Test04_02 {
     public static void main(String[] args) {
         byte x = 1;
         byte y = 1;
