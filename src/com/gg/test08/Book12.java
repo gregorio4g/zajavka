@@ -1,8 +1,8 @@
 package com.gg.test08;
 
-public class Book {
-     private String title;
-     private String author;
+public class Book12 {
+     String title;
+     String author;
      private int examplesSold;
 
      @Override
@@ -18,7 +18,7 @@ public class Book {
           if (obj == null) {
                return false;
           }
-          Book other = (Book) obj;
+          Book12 other = (Book12) obj;
           if(title != null ? !title.equals(other.title) : other.title != null) {
                return false;
           }
