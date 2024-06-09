@@ -1,4 +1,4 @@
-package com.gg.test09;
+package com.gg.test09.pytanie10;
 
 public class Horse {
     String name;

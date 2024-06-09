@@ -1,6 +1,6 @@
-package com.gg.test09;
+package com.gg.test09.pytanie13;
 
-public class Dog implements CanRunFast{
+public class Dog implements CanRunFast {
     public boolean isFast() {
         return false;
     }

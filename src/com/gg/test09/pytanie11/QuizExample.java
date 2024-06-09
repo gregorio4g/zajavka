@@ -1,4 +1,4 @@
-package com.gg.test09;
+package com.gg.test09.pytanie11;
 
 public class QuizExample {
     public QuizExample(byte arg) {

@@ -1,9 +1,10 @@
-package com.gg.test09.my.blog;
+package com.gg.test09.pytanie05.my.blog;
 
 public class MainSite {
     private String header;
     protected String description;
     public int id = 3;
+
     public MainSite(final String header, final String description) {
         this.header = header;
         this.description = description;
