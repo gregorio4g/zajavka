@@ -1,4 +1,4 @@
-package com.gg.pack8.initblocks;
+package com.gg.initblocks;
 
 public class InitBlocks {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.gg.pack8.initblocks;
+package com.gg.initblocks;
 
 public class Car {
     {
@@ -6,7 +6,7 @@ public class Car {
         printDuringInitBlock();
     }
 
-    private String productionYear;
+    private final String productionYear;
 
     public Car() {
         System.out.println("Constructor called." + Car.class);

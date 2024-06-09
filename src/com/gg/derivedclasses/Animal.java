@@ -1,8 +1,8 @@
-package com.gg.src;
+package com.gg.derivedclasses;
 
 public class Animal {
 
-    private String name;
+    private final String name;
 
 //    public Animal() {
 //        System.out.println("Animal created.");

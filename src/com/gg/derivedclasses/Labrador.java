@@ -1,4 +1,4 @@
-package com.gg.src;
+package com.gg.derivedclasses;
 
 public class Labrador extends Dog{
     public Labrador() {

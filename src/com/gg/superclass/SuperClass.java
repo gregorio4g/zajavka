@@ -1,4 +1,4 @@
-package com.gg.pack8;
+package com.gg.superclass;
 
 public class SuperClass {
 

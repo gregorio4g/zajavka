@@ -1,4 +1,4 @@
-package com.gg.pack8.initblocks;
+package com.gg.initblocks;
 
 public class Cabriolet extends Car {
 
@@ -8,7 +8,7 @@ public class Cabriolet extends Car {
     }
 
     private String company = "Mercedes";
-    private String model;
+    private final String model;
 
 
     public Cabriolet(String model) {
