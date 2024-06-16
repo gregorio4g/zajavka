@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie15;
 
 public class Spider extends Animal {
     public void printName(boolean input) {

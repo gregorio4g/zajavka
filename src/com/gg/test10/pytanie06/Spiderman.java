@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie06;
 
 public class Spiderman extends ExtraSpider {
     @Override

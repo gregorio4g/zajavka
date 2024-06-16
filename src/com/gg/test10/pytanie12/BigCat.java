@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie12;
 
 public abstract class BigCat {
     public abstract void run(int i);

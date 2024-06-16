@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie04;
 
 public class YetAnotherQuizClass {
     String value = "one";

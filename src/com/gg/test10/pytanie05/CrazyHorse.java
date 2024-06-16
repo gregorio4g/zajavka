@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie05;
 
 public class CrazyHorse extends CrazyAnimal {
     private String name;

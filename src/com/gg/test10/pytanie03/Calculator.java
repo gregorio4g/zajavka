@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie03;
 
 public class Calculator {
     public static double calculate(int x) {

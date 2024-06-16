@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie11;
 
 abstract class Cabriolet {
     public void openRoof() {

@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie11;
 
 public class Mercedes extends Cabriolet {
     public void openRoof() {

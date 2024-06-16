@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie12;
 
 class Lion extends BigCat {
     public void run(int distance) {

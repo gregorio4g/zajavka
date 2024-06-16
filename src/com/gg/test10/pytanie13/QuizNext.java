@@ -1,4 +1,4 @@
-package com.gg.test10;
+package com.gg.test10.pytanie13;
 
 public class QuizNext {
     public static void main(String[] args) {
