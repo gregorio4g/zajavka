@@ -1,9 +1,11 @@
 package com.gg.enums;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 public class Enums {
-    public static void main(String[] args) {
+    public static void main(String @NotNull [] args) {
         Volkswagen volkswagen = getEnum();
         System.out.println("volkswagen = " + volkswagen);
         System.out.println("volkswagen.getColor() = " + volkswagen.getColor());
@@ -26,20 +28,28 @@ public class Enums {
         System.out.println("golf = " + golf);
 
         System.out.println("Volkswagen.GOLF.doSomething() = " + Volkswagen.GOLF.doSomething());
-        
+
         Volkswagen v1 = getV("arTEON");
         Volkswagen v2 = getV("passat");
 
-        System.out.println("v1 == v2 = " + (v1 == v2));
+        System.out.println("v1 == v2 = " + (v1 == v2)); // this is preferred: change the v2 to Volkswagen2
         System.out.println("(v1.equals(v2)) = " + (v1.equals(v2)));
+
+        System.out.println("Arrays.toString(Volkswagen.values()) = " + Arrays.toString(Volkswagen.values()));
+
+
 
     }
 
-    private static Volkswagen getV(String vw) {
+    private static @NotNull Volkswagen getV(String vw) {
         return Volkswagen.valueOf(vw.toUpperCase());
     }
 
-    private static Volkswagen getEnum() {
+    private static @NotNull Volkswagen2 getV2(String vw) {
+        return Volkswagen2.valueOf(vw.toUpperCase());
+    }
+
+    private static @NotNull Volkswagen getEnum() {
         return Volkswagen.GOLF;
     }
 }

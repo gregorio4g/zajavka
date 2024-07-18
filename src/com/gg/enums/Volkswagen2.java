@@ -1,19 +1,17 @@
 package com.gg.enums;
 
-import org.jetbrains.annotations.NotNull;
-
-public enum Volkswagen implements MyExampleInterface {
+public enum Volkswagen2 implements MyExampleInterface {
     PASSAT("white", 2020),
     GOLF("red", 1020),
     ARTEON("green", 3040),
     TIGUAN("blue", 2021),
     TOUAREG("brown", 1976);
 
-    private @NotNull String color;
+    private String color;
 
-    private final int productionYear;
+    private int productionYear;
 
-    Volkswagen(@NotNull String color, int productionYear) {
+    Volkswagen2(String color, int productionYear) {
         this.color = color;
         this.productionYear = productionYear;
     }
@@ -26,11 +24,11 @@ public enum Volkswagen implements MyExampleInterface {
                 "} " + super.toString();
     }
 
-    public @NotNull String getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(@NotNull String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
