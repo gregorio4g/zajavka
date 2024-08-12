@@ -2,18 +2,32 @@ package com.gg.initblocks;
 
 public class Cabriolet extends Car {
 
+    static String staticFieldClassCabriolet;
+
+    static {
+        staticFieldClassCabriolet = "static Field Cabriolet";
+        System.out.println("Cabriolet static initBlock");
+    }
+
+    private final String model;
+    private final String nonStaticField3B = initField3B();
+    private String company = "Mercedes";
+
     {
         this.company = "Audi";
         printDuringInitBlock();
     }
 
-    private String company = "Mercedes";
-    private final String model;
-
 
     public Cabriolet(String model) {
+        super("from Cabriolet");
         System.out.println("Constructor called: " + Cabriolet.class);
         this.model = model;
+    }
+
+    private String initField3B() {
+        System.out.println("Cabriolet initField3B method");
+        return "initField3 Cbriolet";
     }
 
     private void printDuringInitBlock() {
