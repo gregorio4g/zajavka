@@ -19,11 +19,6 @@ public class Main {
         // zad 5
         System.out.println("Zad 3_5");
         zad3_5(63);
-        // exc 4 - zad 2
-        int a4_2 = 3;
-        int b4_2 = 2;
-        int c4_2 = 1;
-        System.out.printf("MAX(%d, %d, %d) = %d\n", a4_2, b4_2, c4_2, findMax(a4_2,b4_2,c4_2));
         // exc 4 - zad 3
         int num4_3 = 66;
         System.out.println("Liczba " + num4_3 + (czyParzysta(num4_3)?"":" nie") + " jest parzysta.");
@@ -173,17 +168,6 @@ public class Main {
     static void zad3_5(int x) {
         System.out.printf("Liczba %d" + (x % 3 == 0 ? "" : " nie") + " jest podzielna przez 3.\n", x);
         System.out.printf("Liczba %d" + (x % 7 == 0 ? "" : " nie") + " jest podzielna przez 7.\n", x);
-    }
-
-    static boolean czyPrzestepny(int rok) {
-        return (rok % 4 == 0 && rok % 100 != 0 || rok % 400 == 0);
-    }
-
-    static int findMax(int a, int b, int c) {
-        int max = Math.max(b, a);
-        if(c>max) max = c;
-        return max;
-//        return Math.max(a, Math.max(b, c));
     }
 
     static boolean czyParzysta(int num) {
