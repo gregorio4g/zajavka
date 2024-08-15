@@ -1,8 +1,8 @@
 package com.gg;
 
-import com.gg.zad09.global.Global;
+import com.gg.zadania.zad09.global.Global;
 
-import static com.gg.zad09.global.Global.GLOBAL_CONSTANT;
+import static com.gg.zadania.zad09.global.Global.GLOBAL_CONSTANT;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -10,15 +10,6 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // exc 3 - zad 1
-        zad3_1(5.1, 3.5);
-        // zad 4
-        System.out.println("Zad 3_4");
-        String[] kolory = {"czerwony", "zielony", "niebieski", "czarny", "żółty", "brązowy"};
-        System.out.println(kolory[(100 % 6) - 1]);
-        // zad 5
-        System.out.println("Zad 3_5");
-        zad3_5(63);
         // exc 4 - zad 3
         int num4_3 = 66;
         System.out.println("Liczba " + num4_3 + (czyParzysta(num4_3)?"":" nie") + " jest parzysta.");
@@ -158,43 +149,20 @@ public class Main {
         return result;
     }
 
-    static void zad3_1(double x, double y) {
-        System.out.printf("%.2f + %.2f = %.2f\n",x, y, (x + y));
-        System.out.printf("%.2f - %.2f = %.2f\n",x, y, (x - y));
-        System.out.printf("%.2f * %.2f = %.2f\n",x, y, (x * y));
-        System.out.printf("%.2f / %.2f = %.2f\n",x, y, (x / y));
-    }
-
-    static void zad3_5(int x) {
-        System.out.printf("Liczba %d" + (x % 3 == 0 ? "" : " nie") + " jest podzielna przez 3.\n", x);
-        System.out.printf("Liczba %d" + (x % 7 == 0 ? "" : " nie") + " jest podzielna przez 7.\n", x);
-    }
-
     static boolean czyParzysta(int num) {
         return num % 2 == 0;
     }
 
     static int howManyDaysInMonth(int m) {
-        switch(m) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                return 31;
-            case 2:
-                return 28;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                return 30;
-            default:
-                System.out.printf("Nie ma takiego miesiąca: %d!\n",m);
-                return -1;
-        }
+        return switch (m) {
+            case 1, 3, 5, 7, 8, 10, 12 -> 31;
+            case 2 -> 28;
+            case 4, 6, 9, 11 -> 30;
+            default -> {
+                System.out.printf("Nie ma takiego miesiąca: %d!\n", m);
+                yield -1;
+            }
+        };
     }
 
     static int howManyDaysInYear(int m) {

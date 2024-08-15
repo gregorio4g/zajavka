@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Zad03" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="com.gg.zad03.Zad03" />
+    <option name="MAIN_CLASS_NAME" value="com.gg.zadania.zad03.Zad03" />
     <module name="zajavka" />
     <option name="PROGRAM_PARAMETERS" value="63" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="com.gg.zad03.*" />
+        <option name="PATTERN" value="com.gg.zadania.zad03.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
