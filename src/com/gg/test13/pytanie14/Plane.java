@@ -1,4 +1,4 @@
-package com.gg.test13;
+package com.gg.test13.pytanie14;
 
 public class Plane {
   public static void main(String[] args) {
@@ -15,9 +15,8 @@ public class Plane {
       System.out.println(2);
       longNumberOfWheels = Long.parseLong(numberOfWheels);
       System.out.println(3);
-    } catch (NullPointerException e) {
+    } catch (NumberFormatException e) {
       System.out.println(4);
-      throw e;
     }
   }
 }

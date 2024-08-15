@@ -1,4 +1,4 @@
-package com.gg.test13;
+package com.gg.test13.pytanie08;
 
 public class QuizRunner {
   public static void main(String[] args) {
