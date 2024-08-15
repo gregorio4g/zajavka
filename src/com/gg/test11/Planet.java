@@ -1,7 +1,7 @@
 package com.gg.test11;
 
 public enum Planet {
-//    MERCURY,
+//    MECURY,
 //    VENUS,
     EARTH {
         public boolean isInhabited() {
