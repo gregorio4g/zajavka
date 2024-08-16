@@ -10,9 +10,6 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // exc 4 - zad 3
-        int num4_3 = 66;
-        System.out.println("Liczba " + num4_3 + (czyParzysta(num4_3)?"":" nie") + " jest parzysta.");
         // exc 4 - zad 4
         System.out.printf("Marzec ma %d dni.\n", howManyDaysInMonth(3));
         // exc 4 - zad 5
@@ -147,10 +144,6 @@ public class Main {
             result *= j;
         }
         return result;
-    }
-
-    static boolean czyParzysta(int num) {
-        return num % 2 == 0;
     }
 
     static int howManyDaysInMonth(int m) {
