@@ -18,7 +18,21 @@ public class OffsetExample {
         System.out.println("ZoneOffset.MAX = " + ZoneOffset.MAX);
         System.out.println("ZoneOffset.UTC = " + ZoneOffset.UTC);
 
-        System.out.println("9 minut filmu #43 obejrzałem");
+        System.out.println();
+        System.out.println("OffsetDateTime.now() = " + OffsetDateTime.now());
+        System.out.println("OffsetDateTime.now(ZoneOffset.UTC) = " + OffsetDateTime.now(ZoneOffset.UTC));
+
+        System.out.println();
+        OffsetDateTime offsetDateTime = OffsetDateTime.of(localDateTime, ZoneOffset.ofHours(2));
+        System.out.println("offsetDateTime = " + offsetDateTime);
+        System.out.println("offsetDateTime.toLocalDate() = " + offsetDateTime.toLocalDate());
+        System.out.println("offsetDateTime.toLocalTime() = " + offsetDateTime.toLocalTime());
+        System.out.println("offsetDateTime.toLocalDateTime() = " + offsetDateTime.toLocalDateTime());
+        System.out.println("offsetDateTime.toZonedDateTime() = " + offsetDateTime.toZonedDateTime());
+        System.out.println("offsetDateTime.getOffset() = " + offsetDateTime.getOffset());
+        System.out.println("offsetDateTime.getMonth() = " + offsetDateTime.getMonth());
+
+        System.out.println("11 minut filmu #43 obejrzałem");
 
     }
 }
