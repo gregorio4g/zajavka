@@ -1,9 +1,11 @@
 package com.gg.datetimeexamples;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.time.*;
 
 public class OffsetExample {
-    public static void main(String[] args) {
+    public static void main(String @NotNull [] args) {
         LocalDate localDate = LocalDate.of(2020, 1, 20);
         LocalTime localTime = LocalTime.of(12, 50, 10);
         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
@@ -31,8 +33,14 @@ public class OffsetExample {
         System.out.println("offsetDateTime.toZonedDateTime() = " + offsetDateTime.toZonedDateTime());
         System.out.println("offsetDateTime.getOffset() = " + offsetDateTime.getOffset());
         System.out.println("offsetDateTime.getMonth() = " + offsetDateTime.getMonth());
+        System.out.println("offsetDateTime.getMonthValue() = " + offsetDateTime.getMonthValue());
 
-        System.out.println("11 minut filmu #43 obejrzałem");
+        System.out.println();
+        System.out.println("ZonedDateTime.now() = " + ZonedDateTime.now());
+        System.out.println("ZoneId.getAvailableZoneIds() = " + ZoneId.getAvailableZoneIds());
+        System.out.println("ZoneId.of(\"Poland\") = " + ZoneId.of("Poland"));
+        System.out.println("ZoneId.systemDefault() = " + ZoneId.systemDefault());
+        System.out.println("13 minut filmu #43 obejrzałem");
 
     }
 }
