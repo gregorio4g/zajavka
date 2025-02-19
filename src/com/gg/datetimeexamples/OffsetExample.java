@@ -40,7 +40,37 @@ public class OffsetExample {
         System.out.println("ZoneId.getAvailableZoneIds() = " + ZoneId.getAvailableZoneIds());
         System.out.println("ZoneId.of(\"Poland\") = " + ZoneId.of("Poland"));
         System.out.println("ZoneId.systemDefault() = " + ZoneId.systemDefault());
-        System.out.println("13 minut filmu #43 obejrzałem");
+        System.out.println("ZonedDateTime.now(ZoneId.of(\"Poland\")) = " + ZonedDateTime.now(ZoneId.of("Poland")));
+        ZoneOffset utc = ZoneOffset.UTC;
+        ZoneId usPacific = ZoneId.of("US/Pacific");
+        ZoneId paris = ZoneId.of("Europe/Paris");
+        System.out.println("ZonedDateTime.of(localDate, localTime, utc) = " + ZonedDateTime.of(localDate, localTime, utc));
+        System.out.println("ZonedDateTime.of(localDateTime, utc) = " + ZonedDateTime.of(localDateTime, utc));
+        System.out.println("ZonedDateTime.of(localDateTime, usPacific) = " + ZonedDateTime.of(localDateTime, usPacific));
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(localDateTime, paris);
+        System.out.println("ZonedDateTime.of(localDateTime, paris) = " + zonedDateTime);
+        System.out.println("zonedDateTime.toLocalDate() = " + zonedDateTime.toLocalDate());
+        System.out.println("zonedDateTime.toLocalTime() = " + zonedDateTime.toLocalTime());
+        System.out.println("zonedDateTime.toLocalDateTime() = " + zonedDateTime.toLocalDateTime());
+        System.out.println("zonedDateTime.toOffsetDateTime() = " + zonedDateTime.toOffsetDateTime());
+        System.out.println("zonedDateTime.getOffset() = " + zonedDateTime.getOffset());
+        System.out.println("zonedDateTime.getZone() = " + zonedDateTime.getZone());
+        System.out.println("zonedDateTime.getDayOfMonth() = " + zonedDateTime.getDayOfMonth());
+        System.out.println("zonedDateTime.getDayOfWeek() = " + zonedDateTime.getDayOfWeek());
+        System.out.println("zonedDateTime.getDayOfYear() = " + zonedDateTime.getDayOfYear());
+        System.out.println();
+        System.out.println("Daylight:");
+        LocalDate date1 = LocalDate.of(2018, 3, 25);
+        LocalTime time1 = LocalTime.of(1, 55);
+        ZonedDateTime zonedDateTime1 = ZonedDateTime.of(date1, time1, paris);
+        System.out.println("Step 1: " + zonedDateTime1);
+        zonedDateTime1 = zonedDateTime1.plusHours(1);
+        System.out.println("Step 2: " + zonedDateTime1);
+        zonedDateTime1 = zonedDateTime1.plusHours(1);
+        System.out.println("Step 3: " + zonedDateTime1);
+
+
+        System.out.println("22 minut filmu #43 obejrzałem");
 
     }
 }
