@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.time.*;
 
-public class OffsetExample {
+public class OffsetZonedExamples {
     public static void main(String @NotNull [] args) {
         LocalDate localDate = LocalDate.of(2020, 1, 20);
         LocalTime localTime = LocalTime.of(12, 50, 10);

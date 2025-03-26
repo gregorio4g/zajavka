@@ -1,6 +1,7 @@
 package com.gg.datetimeexamples;
 
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 
 public class LocalExamples {
@@ -82,5 +83,19 @@ public class LocalExamples {
         System.out.println("localDate.withMonth(8) = " + localDate.withMonth(8));
 
         System.out.println("localDate.getEra() = " + localDate.getEra());
+
+        LocalDate localDate1 = LocalDate.of(2020, 10, 1);
+        LocalDate localDate2 = LocalDate.of(2020, 12,1);
+        System.out.println("localDate1.isBefore(localDate2) = " + localDate1.isBefore(localDate2));
+        System.out.println("localDate1.isLeapYear() = " + localDate1.isLeapYear());
+        System.out.println("localDate1.isAfter(localDate2) = " + localDate1.isAfter(localDate2));
+
+        System.out.println();
+        System.out.println("localDate.isSupported(ChronoUnit.DAYS) = " + localDate.isSupported(ChronoUnit.DAYS));
+        System.out.println("localDate.plus(2, ChronoUnit.DAYS) = " + localDate.plus(2, ChronoUnit.DAYS));
+        System.out.println("localDate.isSupported(ChronoUnit.MONTHS) = " + localDate.isSupported(ChronoUnit.MONTHS));
+        System.out.println("localDate.plus(2, ChronoUnit.MONTHS) = " + localDate.plus(2, ChronoUnit.MONTHS));
+        System.out.println("localDate.isSupported(ChronoUnit.YEARS) = " + localDate.isSupported(ChronoUnit.YEARS));
+        System.out.println("localDate.plus(2, ChronoUnit.YEARS) = " + localDate.plus(2, ChronoUnit.YEARS));
     }
 }
