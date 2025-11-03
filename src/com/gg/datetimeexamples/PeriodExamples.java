@@ -4,7 +4,7 @@ import java.time.*;
 import java.time.temporal.ChronoUnit;
 
 public class PeriodExamples {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         System.out.println("Period.of(10, 2, 60) = " + Period.of(10, 2, 60));
         System.out.println("Period.ofDays(2) = " + Period.ofDays(2));
         System.out.println("Period.ofMonths(2) = " + Period.ofMonths(2));
@@ -18,20 +18,27 @@ public class PeriodExamples {
         LocalDate localDate2 = LocalDate.of(2025, 12, 15);
         LocalTime localTime = LocalTime.of(20, 10);
         LocalDateTime localDateTime = LocalDateTime.of(localDate1, localTime);
+        System.out.println("localDate1 = " + localDate1);
         System.out.println("localDate1.plus(Period.of(2, ,3, 10)) = " + localDate1.plus(Period.of(2, 3, 10)));
 //        System.out.println("localTime.plus(Period.of(2, 3, 10)) = " + localTime.plus(Period.of(2, 3, 10)));
+        System.out.println("localDateTime = " + localDateTime);
         System.out.println("localDateTime.plus(Period.of(2, 3, 10)) = " + localDateTime.plus(Period.of(2, 3, 10)));
 
+        System.out.println("OffsetDateTime.now() = " + OffsetDateTime.now());
         System.out.println("OffsetDateTime.now().plus(Period.of(2, 3, 10)) = " + OffsetDateTime.now().plus(Period.of(2, 3, 10)));
+        System.out.println("ZonedDateTime.now() = " + ZonedDateTime.now());
         System.out.println("ZonedDateTime.now().plus(Period.of(2, 3, 10)) = " + ZonedDateTime.now().plus(Period.of(2, 3, 10)));
 
         System.out.println();
+        System.out.println("localDate1 = " + localDate1);
+        System.out.println("localDate2 = " + localDate2);
         System.out.println("Period.between(localDate1, localDate2) = " + Period.between(localDate1, localDate2));
         System.out.println("Period.between(localDate1, localDate1) = " + Period.between(localDate1, localDate1));
         System.out.println("Period.between(localDate2, localDate1) = " + Period.between(localDate2, localDate1));
 
         System.out.println();
         Period period = Period.between(localDate1, localDate2);
+        System.out.println("period = " + period);
         System.out.println("period.get(ChronoUnit.DAYS) = " + period.get(ChronoUnit.DAYS));
         System.out.println("period.get(ChronoUnit.MONTHS) = " + period.get(ChronoUnit.MONTHS));
         System.out.println("period.get(ChronoUnit.YEARS) = " + period.get(ChronoUnit.YEARS));
@@ -42,6 +49,7 @@ public class PeriodExamples {
 
         System.out.println();
         Period period2 = Period.between(localDate2, localDate1);
+        System.out.println("period2 = " + period2);
         System.out.println("period2.isNegative() = " + period2.isNegative());
         System.out.println("period2.isZero() = " + period2.isZero());
         System.out.println("Period.ZERO.isZero() = " + Period.ZERO.isZero());
