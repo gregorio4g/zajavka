@@ -7,7 +7,7 @@ public class DurationExamples {
     static void main() {
         System.out.println("Duration.ofDays(1) = " + Duration.ofDays(1));
         System.out.println("Duration.ofHours(1) = " + Duration.ofHours(1));
-        System.out.println("Duration.ofMinutes() = " + Duration.ofMinutes(1));
+        System.out.println("Duration.ofMinutes(1) = " + Duration.ofMinutes(1));
         System.out.println("Duration.ofSeconds(1) = " + Duration.ofSeconds(1));
         System.out.println("Duration.ofMillis(1) = " + Duration.ofMillis(1));
         System.out.println("Duration.ofNanos(1) = " + Duration.ofNanos(1));
