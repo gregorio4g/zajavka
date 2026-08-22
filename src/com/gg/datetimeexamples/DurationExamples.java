@@ -36,5 +36,38 @@ public class DurationExamples {
         System.out.println("localTime.plus(duration) = " + localTime.plus(duration));
         System.out.println("localDateTime.plus(period) = " + localDateTime.plus(period));
         System.out.println("localDateTime.plus(duration) = " + localDateTime.plus(duration));
+
+        System.out.println();
+
+        LocalDate localDate1 = LocalDate.of(2020, 10, 20);
+        LocalDate localDate2 = LocalDate.of(2020, 11, 20);
+        LocalTime localTime1 = LocalTime.of(20, 10, 20);
+        LocalTime localTime2 = LocalTime.of(23, 10, 27);
+        LocalDateTime localDateTime1 = LocalDateTime.of(localDate1,localTime1);
+        LocalDateTime localDateTime2 = LocalDateTime.of(localDate2,localTime2);
+
+//        System.out.println("Duration.between(localDate1, localDate2) = " + Duration.between(localDate1, localDate2));
+//        System.out.println("Duration.between(localTime1,localDate2) = " + Duration.between(localTime1, localDate2));
+        System.out.println("Duration.between(localTime1,localTime2) = " + Duration.between(localTime1, localTime2));
+        System.out.println("Duration.between(localDateTime1,localDateTime2) = " + Duration.between(localDateTime1, localDateTime2));
+
+        System.out.println();
+
+        System.out.println("ChronoUnit.DAYS.between(localDate1, localDate2) = " + ChronoUnit.DAYS.between(localDate1, localDate2));
+//        System.out.println("ChronoUnit.DAYS.between(localTime1,localTime2) = " + ChronoUnit.DAYS.between(localTime1, localTime2));
+//        System.out.println("ChronoUnit.HOURS.between(localDate1,localDate2) = " + ChronoUnit.HOURS.between(localDate1, localDate2));
+        System.out.println("ChronoUnit.HOURS.between(localTime1, localTime2) = " + ChronoUnit.HOURS.between(localTime1, localTime2));
+        System.out.println("ChronoUnit.DAYS.between(localDateTime1, localDateTime2) = " + ChronoUnit.DAYS.between(localDateTime1, localDateTime2));
+        System.out.println("ChronoUnit.HOURS.between(localDateTime1, localDateTime2) = " + ChronoUnit.HOURS.between(localDateTime1, localDateTime2));
+
+        System.out.println();
+
+        Duration duration12 = Duration.between(localTime1, localTime2);
+
+        System.out.println("duration12.getUnits() = " + duration12.getUnits());
+        System.out.println("duration12.getSeconds() = " + duration12.getSeconds());
+        System.out.println("duration12.getNano() = " + duration12.getNano());
+        System.out.println("duration12.get(ChronoUnit.SECONDS) = " + duration12.get(ChronoUnit.SECONDS));
+        System.out.println("duration12.get(ChronoUnit.NANOS) = " + duration12.get(ChronoUnit.NANOS));
     }
 }
