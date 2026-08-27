@@ -64,10 +64,30 @@ public class DurationExamples {
 
         Duration duration12 = Duration.between(localTime1, localTime2);
 
+        System.out.println("duration12 = " + duration12);
         System.out.println("duration12.getUnits() = " + duration12.getUnits());
         System.out.println("duration12.getSeconds() = " + duration12.getSeconds());
         System.out.println("duration12.getNano() = " + duration12.getNano());
         System.out.println("duration12.get(ChronoUnit.SECONDS) = " + duration12.get(ChronoUnit.SECONDS));
         System.out.println("duration12.get(ChronoUnit.NANOS) = " + duration12.get(ChronoUnit.NANOS));
+
+        System.out.println();
+
+        System.out.println("duration12.isNegative() = " + duration12.isNegative());
+        System.out.println("duration12.isPositive() = " + duration12.isPositive());
+        System.out.println("duration12.isZero() = " + duration12.isZero());
+        System.out.println("Duration.ZERO.isZero() = " + Duration.ZERO.isZero());
+
+        System.out.println("duration12.toMinutes() = " + duration12.toMinutes());
+        System.out.println("duration12.toHours() = " + duration12.toHours());
+        System.out.println("duration12.toHoursPart() = " + duration12.toHoursPart());
+
+        System.out.println();
+
+        System.out.println("duration12.truncatedTo(ChronoUnit.SECONDS) = " + duration12.truncatedTo(ChronoUnit.SECONDS));
+        System.out.println("duration12.truncatedTo(ChronoUnit.MINUTES) = " + duration12.truncatedTo(ChronoUnit.MINUTES));
+        System.out.println("duration12.truncatedTo(ChronoUnit.HOURS) = " + duration12.truncatedTo(ChronoUnit.HOURS));
+        System.out.println("duration12.truncatedTo(ChronoUnit.DAYS) = " + duration12.truncatedTo(ChronoUnit.DAYS));
+
     }
 }
