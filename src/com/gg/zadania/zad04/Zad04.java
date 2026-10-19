@@ -9,7 +9,7 @@ import java.util.Locale;
 public class Zad04 {
     public static void main(String[] args) {
         System.out.print("\nZadanie 04 01\n");
-        int year = 0;
+        int year = 1900;
         System.out.println("Rok przestępny: " + year + " " + (isLeapYear(year) ? "TAK" : "NIE"));
 
         System.out.print("\nZadanie 04 02\n");
