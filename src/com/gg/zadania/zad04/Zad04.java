@@ -1,15 +1,16 @@
 package com.gg.zadania.zad04;
 
 import java.time.DateTimeException;
+import java.time.LocalDate;
 import java.time.Month;
 import java.time.format.TextStyle;
 import java.util.Calendar;
 import java.util.Locale;
 
 public class Zad04 {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         System.out.print("\nZadanie 04 01\n");
-        int year = 1900;
+        int year = 2001;
         System.out.println("Rok przestępny: " + year + " " + (isLeapYear(year) ? "TAK" : "NIE"));
 
         System.out.print("\nZadanie 04 02\n");
@@ -55,10 +56,15 @@ public class Zad04 {
         Month month;
         try {
             month = Month.of(arg04);
-            System.out.printf("Miesiąc %s ma %d dni.\n",month.getDisplayName(TextStyle.FULL_STANDALONE, Locale.of("pl")), howManyDaysInMonth(arg04));
+            System.out.printf("Miesiąc %s ma %d dni.\n",month.getDisplayName(TextStyle.FULL_STANDALONE, Locale.of("pl")), howManyDaysInMonth(arg04, year));
         } catch (DateTimeException e) {
-            System.out.printf("Nie ma takiego miesiąca: %d", arg04);
+            month = Month.of(1);
+            System.out.printf("Nie ma takiego miesiąca: %d. Zmieniam na styczeń.\n", arg04);
         }
+
+        System.out.print("\nZadanie 04 05\n");
+        LocalDate localDate = LocalDate.of(year, arg04, howManyDaysInMonth(arg04, year));
+        System.out.printf("Ostatni dzień miesiąca %s w roku %d jest %d dniem roku.\n", month.getDisplayName(TextStyle.FULL_STANDALONE, Locale.of("pl")), year, localDate.getDayOfYear());
 
     }
 
@@ -76,10 +82,10 @@ public class Zad04 {
         return num % 2 == 0;
     }
 
-    static int howManyDaysInMonth(int m) {
+    static int howManyDaysInMonth(int m, int y) {
         return switch (m) {
             case 1, 3, 5, 7, 8, 10, 12 -> 31;
-            case 2 -> 28;
+            case 2 -> (isLeapYear(y)) ? 29 : 28;
             case 4, 6, 9, 11 -> 30;
             default -> {
                 System.out.printf("Nie ma takiego miesiąca: %d!\n", m);
